@@ -11,7 +11,6 @@ const passport = require('passport');
 const app = express();
 
 // Load routers
-const ideas = require('./routes/ideas');
 const users = require('./routes/users');
 
 // Passport Config
@@ -78,7 +77,6 @@ app.get('/about', (req, res) => {
 });
 
 // Use routesf
-app.use('/ideas', ideas);
 app.use('/users', users);
 
 const port = 5000;

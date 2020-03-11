@@ -41,15 +41,6 @@ router.post('/register', (req, res) => {
         errors.push({ text: 'Passwords must be at least 4 characters!' });
     }
 
-    // if (errors.length > 0) {
-    //     res.render('users/register', {
-    //        errors,
-    //        name: req.body.name,
-    //        email: req.body.email,
-    //        password: req.body.password,
-    //        password2: req.body.password2
-    //     });
-    // }
      else {
         User.findOne({email: req.body.email})
             .then(user => {
