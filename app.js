@@ -13,6 +13,8 @@ const app = express();
 // Load routers
 const ideas = require('./routes/ideas');
 const users = require('./routes/users');
+const venues = require('./routes/venues')
+const admin = require('./routes/admin/index')
 
 // Passport Config
 require('./config/passport')(passport);
@@ -80,6 +82,8 @@ app.get('/about', (req, res) => {
 // Use routesf
 app.use('/ideas', ideas);
 app.use('/users', users);
+app.use('/venues',venues)
+app.use('/admin',admin)
 
 const port = 5000;
 app.listen(port, () => {
