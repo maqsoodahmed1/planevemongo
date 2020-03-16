@@ -11,7 +11,6 @@ const passport = require('passport');
 const app = express();
 
 // Load routers
-const ideas = require('./routes/ideas');
 const users = require('./routes/users');
 const venues = require('./routes/venues')
 const admin = require('./routes/admin/index')
@@ -80,7 +79,6 @@ app.get('/about', (req, res) => {
 });
 
 // Use routesf
-app.use('/ideas', ideas);
 app.use('/users', users);
 app.use('/venues',venues)
 app.use('/admin',admin)
