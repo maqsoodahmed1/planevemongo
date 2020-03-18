@@ -9,6 +9,11 @@ const flash = require('connect-flash');
 const passport = require('passport');
 
 const app = express();
+mongoose.connect('mongodb://localhost/planeve', {
+    useMongoClient: true
+}).then(() => console.log('MongoDB Connected ...'))
+  .catch(err => console.log(err));
+  require("./models/Photos");
 
 // Load routers
 const users = require('./routes/users');
@@ -22,10 +27,7 @@ require('./config/passport')(passport);
 mongoose.Promise = global.Promise;
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/planeve', {
-    useMongoClient: true
-}).then(() => console.log('MongoDB Connected ...'))
-  .catch(err => console.log(err));
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -60,9 +62,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// Handlebars Middleware
-// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-// app.set('view engine', 'handlebars');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

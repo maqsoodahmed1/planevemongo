@@ -251,7 +251,7 @@
                   <div class="tab-pane fade active show" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
                    
                     <h3>Overview</h3>
-                    <form>
+                    <form action="/venues/upload" method="POST" enctype="multipart/form-data" >
                             <div class="row">
                               <div class="col-md-6">
                                
@@ -288,14 +288,15 @@
                                                                 <option value="Quetta">
                                    </datalist>
                                    <input type="text" id="venue-postcode" placeholder="Postcode" class="form-control mb-2" />
-                                   <input type="text" id="venue-nearest" placeholder="Nearest Transport Link" class="form-control mb-2" />
-                                   <input type="file" id="venue-image"  placeholder="Choose image" class="form-control mb-2" />
+                                   <input type="text" id="venue-nearest" enctype="multipart/form-data" placeholder="Nearest Transport Link" class="form-control mb-2" />
+                                   <input type="file" id="venue-image"  placeholder="Choose image" name="photo" class="form-control mb-2" />
 
                                 </div>
                               </div>
                             </div>
+                     <button  type="submit" class="btn btn-success">Save Details</button>
+
                      </form>
-                     <button onclick="updateitem()" class="btn btn-success">Save Details</button>
                   </div>
                   <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
                   <!-- admin table -->

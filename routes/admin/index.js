@@ -1,6 +1,8 @@
-const express = require('express');
-const router = express.Router();
-// const { ensureAuthenticated } = require('../../helpers/auth');
+var express = require('express');
+var router    = express.Router();
+var mongoose  = require('mongoose');
+
+
 
 
 router.get('/index', (req, res) => {
@@ -17,6 +19,8 @@ router.get('/enquiries', (req, res) => {
 router.get('/referals', (req, res) => {
     res.render('admin/referals');
 });
+
+
 
 
 module.exports = router;
