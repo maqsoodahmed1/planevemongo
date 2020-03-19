@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
   });
   
   // Init Upload
-  const upload = multer({
+  const  upload =  multer({
     storage: storage,
     limits:{fileSize: 1000000},
     fileFilter: function(req, file, cb){
@@ -32,6 +32,8 @@ const storage = multer.diskStorage({
       cb('Error: Images Only!');
     }
   }
+  
+
   
 
   exports.upload = upload
