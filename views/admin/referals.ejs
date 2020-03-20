@@ -113,7 +113,7 @@
         <!-- Form -->
         <form class="mt-4 mb-3 d-md-none">
           <div class="input-group input-group-rounded input-group-merge">
-            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+            <input type="search" name="" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <span class="fa fa-search"></span>
@@ -229,13 +229,13 @@
                                       <div class="col-lg-6">
                                         <div class="form-group focused">
                                           <label class="form-control-label" for="input-username">Customer Name</label>
-                                          <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" >
+                                          <input type="text" name="customerName" id="input-username" class="form-control form-control-alternative" placeholder="Username" >
                                         </div>
                                       </div>
                                       <div class="col-lg-6">
                                         <div class="form-group">
-                                          <label class="form-control-label" for="input-email">Customer Email address</label>
-                                          <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                                          <label class="form-control-label" for="input-email">Customer Email Address</label>
+                                          <input type="email" name="customerEmail" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
                                         </div>
                                       </div>
                                     </div>
@@ -248,7 +248,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                                         </div>
-                                                        <input class="form-control datepicker" id="startdate" placeholder="Start date" type="text" value="06/18/2019">
+                                                        <input class="form-control datepicker" name="startDate" id="startdate" placeholder="Start Date" type="text" value="06/18/2019">
                                                     </div>
                                                 </div>
                                       </div>
@@ -260,11 +260,9 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                                         </div>
-                                                        <input class="form-control datepicker" id="enddate" placeholder="End date" type="text" value="06/22/2019">
+                                                        <input class="form-control datepicker" name="endDate" id="enddate" placeholder="End date" type="text" value="06/22/2019">
                                                     </div>
                                                 </div>
-                                                
-                                                
                                       </div>
                                     </div>
                                   </div>
@@ -276,7 +274,7 @@
                                       <div class="col-md-12">
                                         <div class="form-group focused">
                                           <label class="form-control-label" for="input-address">Address</label>
-                                          <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                                          <input id="input-address" name="homeAddress" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
                                         </div>
                                       </div>
                                     </div>
@@ -284,19 +282,19 @@
                                       <div class="col-lg-4">
                                         <div class="form-group focused">
                                           <label class="form-control-label" for="input-city">City</label>
-                                          <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
+                                          <input type="text" name="city" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
                                         </div>
                                       </div>
                                       <div class="col-lg-4">
                                         <div class="form-group focused">
                                           <label class="form-control-label" for="input-country">Country</label>
-                                          <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
+                                          <input type="text" id="input-country" name="country" class="form-control form-control-alternative" placeholder="Country" value="United States">
                                         </div>
                                       </div>
                                       <div class="col-lg-4">
                                         <div class="form-group">
                                           <label class="form-control-label" for="input-country">Postal code</label>
-                                          <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+                                          <input type="number" id="input-postal-code" name="postalCode" class="form-control form-control-alternative" placeholder="Postal Code">
                                         </div>
                                       </div>
                                     </div>
@@ -304,19 +302,19 @@
                                   <hr class="my-4">
                                   <!-- Description -->
                                   
-                                  <h6 class="heading-small text-muted mb-4">About venue</h6>
+                                  <h6 class="heading-small text-muted mb-4">About Venue</h6>
                                   <div class="pl-lg-4">
                                         <div class="row">
                                                 <div class="col-lg-6">
                                                   <div class="form-group focused">
                                                     <label class="form-control-label" for="input-username">Budget</label>
-                                                    <input type="number" id="input-budget" class="form-control form-control-alternative"  value="lucky.jesse">
+                                                    <input type="number" name="budget" id="input-budget" class="form-control form-control-alternative"  value="lucky.jesse">
                                                   </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                   <div class="form-group">
-                                                    <label class="form-control-label" for="input-email">Number Of guests</label>
-                                                    <input type="number" id="input-guest" class="form-control form-control-alternative" >
+                                                    <label class="form-control-label" for="input-email">Number Of Guests</label>
+                                                    <input type="number" name="numberOfGuests" id="input-guest" class="form-control form-control-alternative" >
                                                   </div>
                                                 </div>
                                               </div>
@@ -324,7 +322,7 @@
                                               <div class="form-group focused">
                                                     <label class="form-control-label" for="input-username">Catering</label>
                                                     <!-- <input type="number" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse"> -->
-                                                    <input type="text" id="input-catering" list="browse"  class="form-control form-control-alternative" >
+                                                    <input type="text" name="catering" id="input-catering" list="browse"  class="form-control form-control-alternative" >
                                                    
                                                     <datalist id="browse">
                                                             <option selected>None</option>
@@ -339,8 +337,8 @@
                                       <textarea rows="4" id="input-textarea" class="form-control form-control-alternative" placeholder="E.g. Breakout spaces? Style of Venue? Outdoor space? Parking?">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                                     </div>
                                     <div class="form-group">
-                                            <label class="form-control-label" for="input-email">Venues Already considered by clients.</label>
-                                            <input type="text" id="input-venue-considered" class="form-control form-control-alternative" placeholder="(So that we don't accidentally contact them)">
+                                            <label class="form-control-label" for="input-email">Venues Already Considered By Client.</label>
+                                            <input type="text" name="alreadyConsidered" id="input-venue-considered" class="form-control form-control-alternative" placeholder="(So that we don't accidentally contact them)">
                                           </div>
                                   </div>
                                 </form>
