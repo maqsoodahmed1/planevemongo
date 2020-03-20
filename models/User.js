@@ -18,6 +18,17 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     }
-});
-
-mongoose.model('users', UserSchema);
+    ,
+    createdVenues:[
+        {
+            type:Schema.Types.ObjectId,
+            ref:"Venue"
+           
+        }
+    ]  
+},{
+    usePushEach:true
+}
+);
+ 
+module.exports = mongoose.model('users', UserSchema);

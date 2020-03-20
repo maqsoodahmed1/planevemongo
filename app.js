@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/planeve', {
     useMongoClient: true
 }).then(() => console.log('MongoDB Connected ...'))
   .catch(err => console.log(err));
-  require("./models/Photos");
+
 
 // Load routers
 const users = require('./routes/users');

@@ -41,6 +41,11 @@ const venueInfo = mongoose.model('Venue',new Schema({
     venueType:{
         type:String
     }
+    ,
+    createdUser:{
+        type:Schema.Types.ObjectId,
+        ref:"users"
+    }
 }));
 
 
@@ -64,7 +69,7 @@ validateSchema = (venue) =>{
 
     }
 
-            return joi.validate(schema)
+            return joi.validate(venue,schema)
 }
 
 
